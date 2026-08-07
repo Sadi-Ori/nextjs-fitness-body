@@ -1,0 +1,149 @@
+
+[
+    {
+      "id": 1,
+      "name": " Weight Loss Plan",
+      "thumbnail": "https://i.ibb.co.com/vxdbksxw/pexels-andres-ayrton-6551059.jpg",
+      "banner": "https://i.ibb.co.com/C3ZNxSNw/pexels-andres-ayrton-6550876.jpg",
+      "frequency": "Monthly",
+      "price": "$19.99",
+      "description": "Our Ultimate Weight Loss Plan offers personalized meal guides, fat-burning workouts, and weekly check-ins. It helps you lose weight sustainably while maintaining energy and muscle tone.",
+      "category": "Weight Loss",
+      "features": [
+        "Custom Calorie Plan",
+        "Guided Workouts",
+        "Progress Tracker",
+        "Live Q&A with Nutritionist"
+      ],
+      "subscription_benefits": [
+        "Cancel anytime",
+        "Mobile access to tools",
+        "Free diet guide",
+        "Motivational support group"
+      ],
+      "ratings": 4.7,
+      "number_of_reviews": 124
+    },
+    {
+      "id": 2,
+      "name": "Muscle Builder Pro",
+      "thumbnail": "https://i.ibb.co.com/505pW30/pexels-tima-miroshnichenko-5327522.jpg",
+      "banner": "https://i.ibb.co.com/mVVhtyvq/pexels-hacihuseyinerol-27823126.jpg",
+      "frequency": "Monthly",
+      "price": "$24.99",
+      "description": "Muscle Builder Pro is crafted for those looking to increase strength and build lean mass. Includes structured hypertrophy workouts, protein guides, and 1-on-1 coach messaging.",
+      "category": "Muscle Gain",
+      "features": [
+        "4-day Split Plan",
+        "Protein-Rich Diet",
+        "Form Check Videos",
+        "Progressive Overload Tracker"
+      ],
+      "subscription_benefits": [
+        "One-on-one trainer chat",
+        "Cancel anytime",
+        "Free supplement guide",
+        "Community forum"
+      ],
+      "ratings": 4.9,
+      "number_of_reviews": 95
+    },
+    {
+      "id": 3,
+      "name": "Yoga for Flexibility",
+      "thumbnail": "https://i.ibb.co.com/yBMDzmjM/pexels-olly-868483.jpg",
+      "banner": "https://i.ibb.co.com/KzmgBB2D/pexels-cottonbro-4323342.jpg",
+      "frequency": "Monthly",
+      "price": "$14.99",
+      "description": "Improve your flexibility and reduce joint pain with our yoga-based program. Suitable for all levels, includes daily stretching routines and guided video sessions.",
+      "category": "Yoga & Flexibility",
+      "features": [
+        "Daily Guided Yoga",
+        "Stretching Calendar",
+        "Breathing Techniques",
+        "Stress Management Tips"
+      ],
+      "subscription_benefits": [
+        "Stream anytime",
+        "Beginner friendly",
+        "Mindfulness journal",
+        "Progress milestones"
+      ],
+      "ratings": 4.6,
+      "number_of_reviews": 87
+    },
+    {
+      "id": 4,
+      "name": "Personal Training 1-on-1",
+      "thumbnail": "https://i.ibb.co.com/cc5m7Nrd/pexels-julia-larson-6456295.jpg",
+      "banner": "https://i.ibb.co.com/GQ01chsG/pexels-823sl-2475875.jpg",
+      "frequency": "Weekly",
+      "price": "$49.99",
+      "description": "Get weekly virtual personal training from certified coaches. Fully customized training and diet based on your fitness goals and lifestyle.",
+      "category": "Personal Training",
+      "features": [
+        "Weekly 1-on-1 Session",
+        "Live Form Correction",
+        "Custom Training Plan",
+        "Coach Messaging"
+      ],
+      "subscription_benefits": [
+        "Flexible scheduling",
+        "Fully personalized",
+        "Live feedback",
+        "Progress tracking tools"
+      ],
+      "ratings": 5.0,
+      "number_of_reviews": 60
+    },
+    {
+      "id": 5,
+      "name": "HIIT Fat Burner",
+      "thumbnail": "https://i.ibb.co.com/pvjyjYb0/pexels-julia-larson-6456237.jpg",
+      "banner": "https://i.ibb.co.com/MwwqSLP/pexels-annushka-ahuja-7991634.jpg",
+      "frequency": "Monthly",
+      "price": "$17.99",
+      "description": "Burn maximum fat in minimal time with our HIIT routines. Fast-paced workouts ideal for busy individuals who want visible results without long gym sessions.",
+      "category": "Weight Loss",
+      "features": [
+        "20-Minute HIIT Sessions",
+        "No Equipment Needed",
+        "Follow-Along Videos",
+        "Weekly Challenges"
+      ],
+      "subscription_benefits": [
+        "High calorie burn",
+        "Time-saving routines",
+        "Track your results",
+        "Motivational playlists"
+      ],
+      "ratings": 4.8,
+      "number_of_reviews": 110
+    },
+    {
+      "id": 6,
+      "name": " Strength Camp",
+      "thumbnail": "https://i.ibb.co.com/WWcPG5BL/pexels-823sl-2294361.jpg",
+      "banner": "https://i.ibb.co.com/1G2sVhRG/pexels-foadshariyati-31849595.jpg",
+      "frequency": "Monthly",
+      "price": "$18.99",
+      "description": "Perfect for beginners, this plan builds foundational strength using bodyweight and basic dumbbell movements. Learn proper form and build muscle confidence.",
+      "category": "Muscle Gain",
+      "features": [
+        "Beginner-Friendly Workouts",
+        "Video Tutorials",
+        "Strength Log Tracker",
+        "Mobility Warmups"
+      ],
+      "subscription_benefits": [
+        "Progress safely",
+        "Minimal equipment",
+        "Workout at home",
+        "Guided by experts"
+      ],
+      "ratings": 4.5,
+      "number_of_reviews": 76
+    }
+    
+  ]
+  

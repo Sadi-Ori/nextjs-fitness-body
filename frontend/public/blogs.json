@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Full Body Transformation Plan",
+      "date": "May 7, 2025",
+      "desc": "Follow a structured 12-week workout plan designed to sculpt your body, burn fat, and build strength.",
+      "img": "https://i.ibb.co.com/1G2sVhRG/pexels-foadshariyati-31849595.jpg"
+    },
+    {
+      "id": 2,
+      "title": "High-Intensity Cardio Program",
+      "date": "May 6, 2025",
+      "desc": "Push your limits with this fat-blasting HIIT program that gets results fast.",
+      "img": "https://i.ibb.co.com/WWcPG5BL/pexels-823sl-2294361.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Strength & Conditioning Guide",
+      "date": "May 5, 2025",
+      "desc": "A complete guide to gaining muscle, improving endurance, and staying consistent.",
+      "img": "https://i.ibb.co.com/LdgkPwZs/pexels-koolshooters-8520080.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Yoga & Flexibility Routines",
+      "date": "May 4, 2025",
+      "desc": "Improve flexibility, reduce stress, and build core strength through our guided yoga sessions.",
+      "img": "https://i.ibb.co.com/cc5m7Nrd/pexels-julia-larson-6456295.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Nutrition Plans for Every Goal",
+      "date": "May 3, 2025",
+      "desc": "Meal plans tailored for fat loss, muscle gain, or overall health improvement.",
+      "img": "https://i.ibb.co.com/1tS4D2wh/0be42e3144ac44cb672c26a80ad1419d-cucm9ble878c739s3mb0-image.png"
+    },
+    {
+      "id": 6,
+      "title": "Gym Starter Pack",
+      "date": "May 2, 2025",
+      "desc": "Everything beginners need to know—workout basics, form tips, and goal tracking.",
+      "img": "https://i.ibb.co.com/Q793gY3N/0be42e3144ac44cb672c26a80ad1419d-cucmknde878c73agis60-image.png"
+    }
+  ]
+  

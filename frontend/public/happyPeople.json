@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Roger Scott",
+      "position": "Marketing Manager",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "text": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind ."
+    },
+    {
+      "name": "Emily Johnson",
+      "position": "Product Designer",
+      "image": "https://randomuser.me/api/portraits/women/1.jpg",
+      "text": "This team completely changed our product strategy. Super professional and attentive throughout the project."
+    },
+    {
+      "name": "Michael Brown",
+      "position": "Lead Developer",
+      "image": "https://randomuser.me/api/portraits/men/4.jpg",
+      "text": "They delivered everything ahead of schedule and exceeded expectations. Highly recommend working with them!"
+    },
+    {
+      "name": "Sophia Lee",
+      "position": "UI/UX Specialist",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg",
+      "text": "The designs were intuitive, clean, and matched exactly what we envisioned. A pleasure to collaborate with!"
+    },
+    {
+      "name": "Daniel Smith",
+      "position": "Project Manager",
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "text": "Their process is very smooth and communication was always on point. Would definitely hire again."
+    },
+    {
+      "name": "Olivia Martin",
+      "position": "Content Strategist",
+      "image": "https://randomuser.me/api/portraits/women/3.jpg",
+      "text": "Creative, consistent, and great attention to detail. They helped shape our entire content direction."
+    }
+  ]
+  
