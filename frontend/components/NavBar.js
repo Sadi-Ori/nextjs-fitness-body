@@ -46,9 +46,7 @@ export default function Navbar() {
         }}
       >
 
-        {/* =========================
-            BODYBOOST LOGO
-        ========================== */}
+        {/*BODYBOOST LOGO*/}
         <div
           style={{
             display: 'flex',
@@ -106,9 +104,7 @@ export default function Navbar() {
         </div>
 
 
-        {/* =========================
-            NAVIGATION MENU
-        ========================== */}
+        {/*NAVIGATION MENU*/}
         <div
           style={{
             flex: 1,
@@ -164,9 +160,7 @@ export default function Navbar() {
         </div>
 
 
-        {/* =========================
-            BECOME A MEMBER
-        ========================== */}
+        {/*BECOME A MEMBER */}
         <div
           style={{
             flexShrink: 0,
@@ -201,9 +195,7 @@ export default function Navbar() {
       </nav>
 
 
-      {/* =========================
-          MOBILE MENU
-      ========================== */}
+      {/*MOBILE MENU */}
       {dropdownOpen && (
         <div
           style={{

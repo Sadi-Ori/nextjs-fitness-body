@@ -96,7 +96,8 @@ export default function Home() {
               Specialized exercise routines crafted for peak muscular development and body composition.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10 items-stretch">
               
               {/* Div 1: Chest & Arms */}
               <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-200 flex flex-col justify-between hover:shadow-xl transition-shadow">
@@ -178,62 +179,107 @@ export default function Home() {
           </div>
 
           {/* What you get from bodyboost Services Component (T3) */}
-          <div className="py-12">
-            <h1 className="text-3xl w-8/10 mx-auto md:text-6xl bebas-neue text-center mt-12 italic">
-              What you get from bodyboost <span className="text-red-500">Services</span>
-            </h1>
-            <p className="text-center mt-3 w-8/10 mx-auto mb-3 text-sm md:text-2xl text-gray-400">
-              Kick your feet up! With a gym designed around you, <br /> we think you'll love it here.
-            </p>
+<div className="py-12">
+  <h1 className="text-3xl w-8/10 mx-auto md:text-6xl bebas-neue text-center mt-12 italic">
+    What you get from bodyboost{' '}
+    <span className="text-red-500">Services</span>
+  </h1>
 
-            {loading ? (
-              <div className="flex justify-center items-center py-16">
-                <div className="animate-spin rounded-full h-12 w-12 border-4 border-red-500 border-t-transparent"></div>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center w-8/10 gap-5 mt-10 mx-auto">
-                {services.map((service) => (
-                  <ServiceCard key={service.id} service={service} />
-                ))}
-              </div>
-            )}
-          </div>
+  <p className="text-center mt-3 w-8/10 mx-auto mb-3 text-sm md:text-2xl text-gray-400">
+    Kick your feet up! With a gym designed around you, <br />
+    we think you'll love it here.
+  </p>
+
+  {loading ? (
+
+    <div className="flex justify-center items-center py-16">
+      <div className="animate-spin rounded-full h-12 w-12 border-4 border-red-500 border-t-transparent"></div>
+    </div>
+
+  ) : (
+
+    <div
+      className="w-full max-w-6xl mx-auto mt-10 px-4"
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+        gap: '32px',
+      }}
+    >
+
+      {services.map((service) => (
+        <ServiceCard
+          key={service.id}
+          service={service}
+        />
+      ))}
+
+    </div>
+
+  )}
+
+</div>
 
           {/* Fitness Trainer Component (W3) */}
-          <div className="py-12 mb-12">
-            <div className="mb-12">
-              <h1 className="text-3xl w-8/10 mx-auto md:text-6xl bebas-neue text-center mt-12 italic">
-                Fitness <span className="text-red-500">Trainer</span>
-              </h1>
-              <p className="text-center mt-3 w-8/10 mx-auto mb-3 text-sm md:text-2xl text-gray-400">
-                Train with experts who guide your fitness <br /> journey, so you can achieve the results you've always wanted.
-              </p>
-            </div>
+<div className="py-12 mb-12">
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6">
-              {trainers.map((trainer, idx) => (
-                <div
-                  key={trainer.id || idx}
-                  className="bg-white rounded-2xl shadow-md overflow-hidden text-center hover:shadow-xl transition-shadow duration-300"
-                >
-                  <img
-                    src={trainer.image}
-                    alt={trainer.name}
-                    className="w-full h-64 object-cover"
-                    data-aos="fade-up-right"
-                  />
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold italic text-gray-800 uppercase">
-                      {trainer.name}
-                    </h3>
-                    <p className="text-sm text-gray-500 mt-1">
-                      {trainer.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+  <div className="mb-12">
+
+    <h1 className="text-3xl w-8/10 mx-auto md:text-6xl bebas-neue text-center mt-12 italic">
+      Fitness <span className="text-red-500">Trainer</span>
+    </h1>
+
+    <p className="text-center mt-3 w-8/10 mx-auto mb-3 text-sm md:text-2xl text-gray-400">
+      Train with experts who guide your fitness <br />
+      journey, so you can achieve the results you've always wanted.
+    </p>
+
+  </div>
+
+
+  {/* 4 TRAINERS - ONE ROW */}
+  <div
+    className="w-full max-w-7xl mx-auto px-6 mt-10"
+    style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+      gap: '24px',
+    }}
+  >
+
+    {trainers.map((trainer, idx) => (
+
+      <div
+        key={trainer.id || idx}
+        className="bg-white rounded-2xl shadow-md overflow-hidden text-center hover:shadow-xl transition-shadow duration-300"
+      >
+
+        <img
+          src={trainer.image}
+          alt={trainer.name}
+          className="w-full h-64 object-cover"
+          data-aos="fade-up-right"
+        />
+
+        <div className="p-4">
+
+          <h3 className="text-lg font-semibold italic text-gray-800 uppercase">
+            {trainer.name}
+          </h3>
+
+          <p className="text-sm text-gray-500 mt-1">
+            {trainer.title}
+          </p>
+
+        </div>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
 
           {/* Happy People Reviews Component (J3) */}
           <div className="mb-20">
