@@ -2,12 +2,10 @@ import React, { useContext, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { AuthContext } from '../lib/AuthContext';
-import { ShoppingCart } from 'lucide-react';
 
 export default function Navbar() {
   const { user, Logout } = useContext(AuthContext);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
   const router = useRouter();
 
   const handleAuthAction = () => {
@@ -20,136 +18,237 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'BMI Calculator', path: '/bmi' },
-    { name: 'Blogs', path: '/blogs' },
-    { name: 'Contact', path: '/contactus' },
+    { name: 'HOME', path: '/' },
+    { name: 'ABOUT', path: '/about' },
+    { name: 'BMI CALCULATOR', path: '/bmi' },
+    { name: 'BLOGS', path: '/blogs' },
+    { name: 'CONTACT', path: '/contactus' },
   ];
 
-  if (user) {
-    navLinks.push({ name: 'My Profile', path: '/myprofile' });
-  }
-
-  const renderNavItems = (
-    <>
-      {navLinks.map((link) => (
-        <li key={link.name}>
-          <Link
-            href={link.path}
-            onClick={() => setDropdownOpen(false)}
-            className={router.pathname === link.path ? 'text-red-500 font-bold' : ''}
-          >
-            {link.name}
-          </Link>
-        </li>
-      ))}
-    </>
-  );
-
   return (
-    <div className="bg-white sticky top-0 z-50 border-b border-gray-100 shadow-sm">
-      <div className="navbar container mx-auto">
-        
-        {/* Navbar Start: Hamburger Dropdown & Logo */}
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="btn btn-ghost lg:hidden"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
+    <header
+      style={{
+        width: '100%',
+        backgroundColor: '#ffffff',
+        borderBottom: '1px solid #eeeeee',
+        position: 'relative',
+        zIndex: 1000,
+      }}
+    >
+      <nav
+        style={{
+          width: '100%',
+          minHeight: '72px',
+          display: 'flex',
+          alignItems: 'center',
+          padding: '0 50px',
+          boxSizing: 'border-box',
+        }}
+      >
 
-            {dropdownOpen && (
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content bg-amber-50 border rounded-box z-1 mt-3 w-52 p-4 md:pb-2 pb-0 shadow bebas-neue text-xl space-y-1"
-              >
-                {renderNavItems}
-                <li>
-                  <button
-                    onClick={() => {
-                      setDropdownOpen(false);
-                      handleAuthAction();
-                    }}
-                    className="pl-7 py-2 bg-red-500 text-white w-3/4 mt-3 md:hidden hover:bg-gray-800 text-left rounded"
-                  >
-                    {user ? 'LOG OUT' : 'BECOME A MEMBER'}
-                  </button>
-                </li>
-              </ul>
-            )}
-          </div>
-
-          <Link href="/" className="flex items-center">
-            <img src="/logo.webp" alt="BodyBoost" className="w-13 rotate-6" />
-            <span className="text-4xl mt-2.5 bebas-neue text-red-500 italic ml-0">
-              BodyBoost
-            </span>
-          </Link>
-        </div>
-
-        {/* Navbar Center: Desktop Navigation */}
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 bebas-neue text-xl space-x-2">
-            {renderNavItems}
-          </ul>
-        </div>
-
-        {/* Navbar End: Cart Icon, User Avatar & Action Button */}
-        <div className="navbar-end gap-4">
-          
-          {/* Shopping Cart Option Icon */}
+        {/*BODYBOOST LOGO*/}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            flexShrink: 0,
+          }}
+        >
+          {/* Mobile hamburger */}
           <button
-            onClick={() => alert("Shopping Cart: Select fitness packages from Services to enroll.")}
-            className="btn btn-ghost btn-circle relative text-gray-700 hover:text-red-500"
-            title="Cart Options"
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+            style={{
+              display: 'none',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              marginRight: '10px',
+            }}
           >
-            <ShoppingCart className="w-6 h-6" />
-            <span className="badge badge-sm badge-error text-white absolute -top-1 -right-1 font-bold">
-              {cartCount}
-            </span>
+            ☰
           </button>
 
-          {user && (
-            <Link href="/myprofile" title="My Profile">
-              <img
-                src={
-                  user.photoURL && user.photoURL !== 'N/A'
-                    ? user.photoURL
-                    : 'https://i.ibb.co.com/MyLkVgN0/Screenshot-2025-05-06-001159.png'
-                }
-                alt="User Avatar"
-                className="w-12 h-12 rounded-full cursor-pointer object-cover border-2 border-red-500"
-              />
-            </Link>
-          )}
+          <Link
+            href="/"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              textDecoration: 'none',
+            }}
+          >
+            <img
+              src="/logo.webp"
+              alt="BodyBoost"
+              style={{
+                width: '48px',
+                height: '48px',
+                objectFit: 'contain',
+                transform: 'rotate(6deg)',
+              }}
+            />
 
+            <span
+              style={{
+                marginLeft: '4px',
+                fontSize: '34px',
+                fontWeight: '700',
+                fontStyle: 'italic',
+                color: '#f22f3e',
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              BODYBOOST
+            </span>
+          </Link>
+        </div>
+
+
+        {/*NAVIGATION MENU*/}
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginLeft: '40px',
+            marginRight: '40px',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '32px',
+              whiteSpace: 'nowrap',
+            }}
+          >
+
+            {navLinks.map((link) => {
+              const active = router.pathname === link.path;
+
+              return (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  style={{
+                    textDecoration: 'none',
+                    color: active ? '#ff2939' : '#111111',
+                    fontSize: '17px',
+                    fontWeight: active ? '700' : '600',
+                    textTransform: 'uppercase',
+                    whiteSpace: 'nowrap',
+                    fontFamily: 'Bebas Neue, sans-serif',
+                    transition: 'color 0.2s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#ff2939';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = active
+                      ? '#ff2939'
+                      : '#111111';
+                  }}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+
+          </div>
+        </div>
+
+
+        {/*BECOME A MEMBER */}
+        <div
+          style={{
+            flexShrink: 0,
+          }}
+        >
           <button
             onClick={handleAuthAction}
-            className="bg-red-500 text-white px-6 py-2 md:mr-2 hidden md:flex hover:bg-gray-800 bebas-neue text-xl cursor-pointer rounded transition-colors"
+            style={{
+              backgroundColor: '#ff2939',
+              color: '#ffffff',
+              border: 'none',
+              padding: '13px 25px',
+              minWidth: '193px',
+              fontSize: '16px',
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              cursor: 'pointer',
+              fontFamily: 'Bebas Neue, sans-serif',
+              transition: 'background-color 0.2s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#222222';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#ff2939';
+            }}
           >
             {user ? 'LOG OUT' : 'BECOME A MEMBER'}
           </button>
         </div>
 
-      </div>
-    </div>
+      </nav>
+
+
+      {/*MOBILE MENU */}
+      {dropdownOpen && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '72px',
+            left: 0,
+            width: '100%',
+            backgroundColor: '#ffffff',
+            borderTop: '1px solid #eeeeee',
+            boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
+            padding: '20px',
+          }}
+        >
+          {navLinks.map((link) => (
+            <div key={link.path} style={{ marginBottom: '15px' }}>
+              <Link
+                href={link.path}
+                onClick={() => setDropdownOpen(false)}
+                style={{
+                  color:
+                    router.pathname === link.path
+                      ? '#ff2939'
+                      : '#111111',
+                  textDecoration: 'none',
+                  fontSize: '20px',
+                  fontWeight: '600',
+                }}
+              >
+                {link.name}
+              </Link>
+            </div>
+          ))}
+
+          <button
+            onClick={() => {
+              setDropdownOpen(false);
+              handleAuthAction();
+            }}
+            style={{
+              backgroundColor: '#ff2939',
+              color: '#ffffff',
+              border: 'none',
+              padding: '12px 20px',
+              cursor: 'pointer',
+              fontSize: '16px',
+              width: '200px',
+            }}
+          >
+            {user ? 'LOG OUT' : 'BECOME A MEMBER'}
+          </button>
+        </div>
+      )}
+
+    </header>
   );
 }

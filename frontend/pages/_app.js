@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import '../styles/live_site.css'
 import Head from 'next/head'
 import { AuthProvider, AuthContext } from '../lib/AuthContext'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/NavBar';
 import Footer from '../components/Footer'
 import { useContext } from 'react'
 
@@ -33,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/logo.webp" />
       </Head>
       <div className="font-sans bg-white text-gray-900 min-h-screen flex flex-col justify-between">
-        <Navbar />
+      <Navbar />
         <main className="flex-grow">
           <Component {...pageProps} />
         </main>
