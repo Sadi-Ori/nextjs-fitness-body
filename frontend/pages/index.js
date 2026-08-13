@@ -45,59 +45,123 @@ export default function Home() {
         {/* Container for Home Sections */}
         <div className="container mx-auto px-4">
           
-          {/* Why Join BodyBoost Component (w3) */}
-          <div className="py-12">
-            <h1 className="text-3xl w-8/10 mx-auto md:text-6xl bebas-neue text-center mt-12 md:mt-20 italic">
-              Why Join <span className="text-red-500">BodyBoost</span>
-            </h1>
-            <p className="text-center mt-3 w-8/10 mx-auto mb-3 text-sm md:text-2xl text-gray-400">
-              Kick your feet up! With a gym designed around you, we think <br /> you'll love it here.
-            </p>
+         {/* Why Join BodyBoost */}
+  <section className="bg-white pt-10 pb-16">
 
-            <div className="flex flex-col md:flex-row text-center justify-center items-center gap-5 mx-auto lg:gap-8 mt-10">
-              <div className="px-10 py-10 w-[300px] md:w-[400px] space-y-3 transform transition duration-300 hover:scale-105 bg-white rounded-xl shadow-sm border border-gray-100" data-aos="fade-right">
-                <img className="mx-auto h-24 object-contain" src="/assets/img1-D-w3oOni.png" alt="Free Fitness Training" />
-                <h1 className="text-3xl italic bebas-neue text-gray-900">
-                  Free Fitness <br /> Training
-                </h1>
-                <p className="text-gray-600 text-sm">
-                  Over 50 group training sessions per week. There is no one type or way in our diverse community. Come as you are!
-                </p>
-              </div>
+  {/* Heading */}
+  <div className="text-center mb-10">
 
-              <div className="px-10 py-10 w-[300px] md:w-[400px] space-y-3 transform transition duration-300 hover:scale-105 bg-white rounded-xl shadow-sm border border-gray-100" data-aos="fade-up">
-                <img className="mx-auto h-24 object-contain" src="/assets/img2-BJzvBi4v.png" alt="Tons of Cardio & Strength" />
-                <h1 className="text-3xl italic bebas-neue text-gray-900">
-                  Tons of Cardio & <br /> Strength
-                </h1>
-                <p className="text-gray-600 text-sm">
-                  Over 50 group training sessions per week. There is no one type or way in our diverse community. Come as you are!
-                </p>
-              </div>
+    <h2 className="text-4xl md:text-5xl bebas-neue italic">
+      WHY JOIN <span className="text-red-500">BODYBOOST</span>
+    </h2>
 
-              <div className="px-10 py-10 w-[300px] md:w-[400px] space-y-3 transform transition duration-300 hover:scale-105 bg-white rounded-xl shadow-sm border border-gray-100" data-aos="fade-left">
-                <img className="mx-auto h-24 object-contain" src="/assets/img3-B4NX7bHp.png" alt="No Commitment Memberships" />
-                <h1 className="text-3xl italic bebas-neue text-gray-900">
-                  No Commitment <br /> Memberships
-                </h1>
-                <p className="text-gray-600 text-sm">
-                  Over 50 group training sessions per week. There is no one type or way in our diverse community. Come as you are!
-                </p>
-              </div>
-            </div>
-          </div>
+    <p className="mt-3 text-lg md:text-2xl text-gray-400">
+      Kick your feet up! With a gym designed around you, we think you'll love it here.
+    </p>
 
-          {/* 4 BODY PARTS WORKOUT SECTIONS */}
-          <div className="py-16 bg-slate-50 my-12 rounded-3xl p-6 md:p-12 border border-gray-100">
-            <h1 className="text-3xl w-8/10 mx-auto md:text-6xl bebas-neue text-center italic mb-3">
-              Targeted Body <span className="text-red-500">Training Programs</span>
-            </h1>
-            <p className="text-center w-8/10 mx-auto mb-12 text-sm md:text-2xl text-gray-400">
-              Specialized exercise routines crafted for peak muscular development and body composition.
-            </p>
+  </div>
 
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10 items-stretch">
+
+  {/* Features */}
+  <div
+    className="w-full max-w-6xl mx-auto px-6"
+    style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+      columnGap: '45px',
+    }}
+  >
+
+    {/* ================= FEATURE 1 ================= */}
+    <div className="text-center">
+
+      <div className="h-28 flex items-center justify-center">
+        <img
+          src="/assets/img1-D-w3oOni.png"
+          alt="Free Fitness Training"
+          className="w-24 h-24 object-contain"
+        />
+      </div>
+
+      <h3 className="mt-3 bebas-neue text-xl md:text-2xl leading-tight text-black">
+        FREE FITNESS
+        <br />
+        TRAINING
+      </h3>
+
+      <p className="mt-5 text-base md:text-lg text-gray-400 leading-relaxed max-w-md mx-auto">
+        Our free training sessions help you stay active, healthy and strong
+        while achieving your fitness goals.
+      </p>
+
+    </div>
+
+
+    {/* ================= FEATURE 2 ================= */}
+    <div className="text-center">
+
+      <div className="h-28 flex items-center justify-center">
+        <img
+          src="/assets/img2-BJzvBi4v.png"
+          alt="Cardio and Strength"
+          className="w-24 h-24 object-contain"
+        />
+      </div>
+
+      <h3 className="mt-3 bebas-neue text-xl md:text-2xl leading-tight text-black">
+        TONS OF CARDIO &
+        <br />
+        STRENGTH
+      </h3>
+
+      <p className="mt-5 text-base md:text-lg text-gray-400 leading-relaxed max-w-md mx-auto">
+        Get access to cardio and strength equipment designed to help you
+        reach your fitness goals.
+      </p>
+
+    </div>
+
+
+    {/* ================= FEATURE 3 ================= */}
+    <div className="text-center">
+
+      <div className="h-28 flex items-center justify-center">
+        <img
+          src="/assets/img3-B4NX7bHp.png"
+          alt="No Commitment Memberships"
+          className="w-24 h-24 object-contain"
+        />
+      </div>
+
+      <h3 className="mt-3 bebas-neue text-xl md:text-2xl leading-tight text-black">
+        NO COMMITMENT
+        <br />
+        MEMBERSHIPS
+      </h3>
+
+      <p className="mt-5 text-base md:text-lg text-gray-400 leading-relaxed max-w-md mx-auto">
+        Choose a membership that works for you without being locked into
+        a long-term commitment.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+      {/* 4 BODY PARTS WORKOUT SECTIONS */}
+<div className="bg-white pt-16 pb-12 px-6 md:px-12">
+
+  <h1 className="text-3xl w-8/10 mx-auto md:text-6xl bebas-neue text-center italic mb-6">
+    Targeted Body <span className="text-red-500">Training Programs</span>
+  </h1>
+
+  <p className="text-center w-8/10 mx-auto mb-12 text-base md:text-2xl text-gray-400 leading-relaxed">
+    Specialized exercise routines crafted for peak muscular development and body composition.
+  </p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10 items-stretch">
               
               {/* Div 1: Chest & Arms */}
               <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-200 flex flex-col justify-between hover:shadow-xl transition-shadow">

@@ -3,80 +3,209 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <div className="bg-amber-50 italic pt-10 text-gray-800 border-t border-amber-100">
-      <footer className="px-4 divide-y divide-gray-200">
-        <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-          
-          {/* Logo Branding */}
-          <div className="lg:w-1/3">
-            <Link href="/" className="flex justify-center space-x-3 lg:justify-start">
-              <div className="flex items-center justify-center h-12 rounded-full">
-                <img src="/logo.webp" alt="BodyBoost" className="w-16 rotate-4 object-contain" />
-                <span className="text-5xl text-red-500 mt-2 bebas-neue not-italic">
-                  BodyBoost
-                </span>
-              </div>
+    <footer className="bg-[#fffbed] text-[#17243a]">
+
+      {/* FOOTER CONTENT */}
+      <div className="w-full px-5 pt-16 pb-5">
+
+        <div className="flex items-start justify-between">
+
+          {/* LOGO */}
+          <div className="flex-shrink-0">
+            <Link
+              href="/"
+              className="flex items-center"
+            >
+              <img
+                src="/logo.webp"
+                alt="BodyBoost"
+                className="w-[58px] h-[58px] object-contain"
+              />
+
+              <span className="ml-2 text-[36px] text-red-500 bebas-neue italic leading-none">
+                BODYBOOST
+              </span>
             </Link>
           </div>
 
-          {/* Links Grid */}
-          <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
-            
-            <div className="space-y-3">
-              <h3 className="tracking-wide uppercase font-bold text-gray-900 not-italic">Product</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li><a rel="noopener noreferrer" href="#">Features</a></li>
-                <li><a rel="noopener noreferrer" href="#">Integrations</a></li>
-                <li><a rel="noopener noreferrer" href="#">Pricing</a></li>
-                <li><a rel="noopener noreferrer" href="#">FAQ</a></li>
-              </ul>
-            </div>
 
-            <div className="space-y-3">
-              <h3 className="tracking-wide uppercase font-bold text-gray-900 not-italic">Company</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li><a rel="noopener noreferrer" href="#">Privacy</a></li>
-                <li><a rel="noopener noreferrer" href="#">Terms of Service</a></li>
-              </ul>
-            </div>
+          {/* PRODUCT */}
+          <div className="w-[180px]">
+            <h3 className="text-[15px] font-normal italic mb-3">
+              PRODUCT
+            </h3>
 
-            <div className="space-y-3">
-              <h3 className="uppercase font-bold text-gray-900 not-italic">Developers</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li><a rel="noopener noreferrer" href="#">Public API</a></li>
-                <li><a rel="noopener noreferrer" href="#">Documentation</a></li>
-                <li><a rel="noopener noreferrer" href="#">Guides</a></li>
-              </ul>
-            </div>
+            <div className="flex flex-col gap-[4px]">
 
-            <div className="space-y-3">
-              <div className="uppercase font-bold text-gray-900 not-italic">Social media</div>
-              <div className="flex justify-start space-x-3 text-gray-700">
-                <a rel="noopener noreferrer" href="#" title="Facebook" className="flex items-center p-1 hover:text-red-500 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-5 h-5 fill-current">
-                    <path d="M32 16c0-8.839-7.167-16-16-16-8.839 0-16 7.161-16 16 0 7.984 5.849 14.604 13.5 15.803v-11.177h-4.063v-4.625h4.063v-3.527c0-4.009 2.385-6.223 6.041-6.223 1.751 0 3.584 0.312 3.584 0.312v3.937h-2.021c-1.984 0-2.604 1.235-2.604 2.5v3h4.437l-0.713 4.625h-3.724v11.177c7.645-1.199 13.5-7.819 13.5-15.803z" />
-                  </svg>
-                </a>
-                <a rel="noopener noreferrer" href="#" title="Twitter" className="flex items-center p-1 hover:text-red-500 transition-colors">
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current">
-                    <path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
-                  </svg>
-                </a>
-                <a rel="noopener noreferrer" href="#" title="Instagram" className="flex items-center p-1 hover:text-red-500 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5 fill-current">
-                    <path d="M16 0c-4.349 0-4.891 0.021-6.593 0.093-1.709 0.084-2.865 0.349-3.885 0.745-1.052 0.412-1.948 0.959-2.833 1.849-0.891 0.885-1.443 1.781-1.849 2.833-0.396 1.020-0.661 2.176-0.745 3.885-0.077 1.703-0.093 2.244-0.093 6.593s0.021 4.891 0.093 6.593c0.084 1.704 0.349 2.865 0.745 3.885 0.412 1.052 0.959 1.948 1.849 2.833 0.885 0.891 1.781 1.443 2.833 1.849 1.020 0.391 2.181 0.661 3.885 0.745 1.703 0.077 2.244 0.093 6.593 0.093s4.891-0.021 6.593-0.093c1.704-0.084 2.865-0.355 3.885-0.745 1.052-0.412 1.948-0.959 2.833-1.849 0.891-0.885 1.443-1.776 1.849-2.833 0.391-1.020 0.661-2.181 0.745-3.885 0.077-1.703 0.093-2.244 0.093-6.593s-0.021-4.891-0.093-6.593c-0.084-1.704-0.355-2.871-0.745-3.885-0.412-1.052-0.959-1.948-1.849-2.833-0.885-0.891-1.776-1.443-2.833-1.849-1.020-0.396-2.181-0.661-3.885-0.745-1.703-0.077-2.244-0.093-6.593-0.093zM16 2.88c4.271 0 4.781 0.021 6.469 0.093 1.557 0.073 2.405 0.333 2.968 0.553 0.751 0.291 1.276 0.635 1.844 1.197 0.557 0.557 0.901 1.088 1.192 1.839 0.22 0.563 0.48 1.411 0.553 2.968 0.072 1.688 0.093 2.199 0.093 6.469s-0.021 4.781-0.099 6.469c-0.084 1.557-0.344 2.405-0.563 2.968-0.303 0.751-0.641 1.276-1.199 1.844-0.563 0.557-1.099 0.901-1.844 1.192-0.556 0.22-1.416 0.48-2.979 0.553-1.697 0.072-2.197 0.093-6.479 0.093s-4.781-0.021-6.48-0.099c-1.557-0.084-2.416-0.344-2.979-0.563-0.76-0.303-1.281-0.641-1.839-1.199-0.563-0.563-0.921-1.099-1.197-1.844-0.224-0.556-0.48-1.416-0.563-2.979-0.057-1.677-0.084-2.197-0.084-6.459 0-4.26 0.027-4.781 0.084-6.479 0.083-1.563 0.339-2.421 0.563-2.979 0.276-0.761 0.635-1.281 1.197-1.844 0.557-0.557 1.079-0.917 1.839-1.199 0.563-0.219 1.401-0.479 2.964-0.557 1.697-0.061 2.197-0.083 6.473-0.083zM16 7.787c-4.541 0-8.213 3.677-8.213 8.213 0 4.541 3.677 8.213 8.213 8.213 4.541 0 8.213-3.677 8.213-8.213 0-4.541-3.677-8.213-8.213-8.213zM16 21.333c-2.948 0-5.333-2.385-5.333-5.333s2.385-5.333 5.333-5.333c2.948 0 5.333 2.385 5.333 5.333s-2.385 5.333-5.333 5.333z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
+              <Link
+                href="/"
+                className="text-[13px] italic hover:text-red-500"
+              >
+                Features
+              </Link>
 
+              <Link
+                href="/"
+                className="text-[13px] italic hover:text-red-500"
+              >
+                Integrations
+              </Link>
+
+              <Link
+                href="/services"
+                className="text-[13px] italic hover:text-red-500"
+              >
+                Pricing
+              </Link>
+
+              <Link
+                href="/"
+                className="text-[13px] italic hover:text-red-500"
+              >
+                FAQ
+              </Link>
+
+            </div>
           </div>
+
+
+          {/* COMPANY */}
+          <div className="w-[180px]">
+            <h3 className="text-[15px] font-normal italic mb-3">
+              COMPANY
+            </h3>
+
+            <div className="flex flex-col gap-[4px]">
+
+              <Link
+                href="/"
+                className="text-[13px] italic hover:text-red-500"
+              >
+                Privacy
+              </Link>
+
+              <Link
+                href="/"
+                className="text-[13px] italic hover:text-red-500"
+              >
+                Terms of Service
+              </Link>
+
+            </div>
+          </div>
+
+
+          {/* DEVELOPERS */}
+          <div className="w-[180px]">
+            <h3 className="text-[15px] font-normal italic mb-3">
+              DEVELOPERS
+            </h3>
+
+            <div className="flex flex-col gap-[4px]">
+
+              <Link
+                href="/"
+                className="text-[13px] italic hover:text-red-500"
+              >
+                Public API
+              </Link>
+
+              <Link
+                href="/"
+                className="text-[13px] italic hover:text-red-500"
+              >
+                Documentation
+              </Link>
+
+              <Link
+                href="/"
+                className="text-[13px] italic hover:text-red-500"
+              >
+                Guides
+              </Link>
+
+            </div>
+          </div>
+
+
+          {/* SOCIAL MEDIA */}
+          <div className="w-[180px]">
+            <h3 className="text-[15px] font-normal italic mb-3">
+              SOCIAL MEDIA
+            </h3>
+
+            <div className="flex items-center gap-6">
+
+              {/* Facebook */}
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="hover:text-red-500 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-[18px] h-[18px]"
+                >
+                  <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.017 1.792-4.689 4.533-4.689 1.312 0 2.686.235 2.686.235v2.965h-1.514c-1.491 0-1.956.927-1.956 1.878v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
+                </svg>
+              </a>
+
+
+              {/* Twitter */}
+              <a
+                href="#"
+                aria-label="Twitter"
+                className="hover:text-red-500 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-[18px] h-[18px]"
+                >
+                  <path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.03 10.03 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482A13.978 13.978 0 011.64 3.161a4.822 4.822 0 00-.666 2.475 4.919 4.919 0 002.188 4.096 4.903 4.903 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417A9.869 9.869 0 011.328 19.61c-.41 0-.819-.023-1.228-.07a13.945 13.945 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
+                </svg>
+              </a>
+
+
+              {/* Instagram */}
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="hover:text-red-500 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-[18px] h-[18px]"
+                >
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.415.5.184.957.478 1.32.858.38.363.674.82.858 1.32.166.422.361 1.057.415 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.415 2.227a3.97 3.97 0 01-2.178 2.178c-.422.166-1.057.361-2.227.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.415a3.97 3.97 0 01-2.178-2.178c-.166-.422-.361-1.057-.415-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.249-1.805.415-2.227.184-.5.478-.957.858-1.32.363-.38.82-.674 1.32-.858.422-.166 1.057-.361 2.227-.415C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.775.13 4.908.333 4.15.63a6.62 6.62 0 00-2.39 1.553A6.62 6.62 0 00.207 4.573C-.09 5.331-.293 6.198-.351 7.476-.409 8.756-.423 9.164-.423 12.423s.014 3.667.072 4.947c.058 1.278.261 2.145.558 2.903a6.62 6.62 0 001.553 2.39 6.62 6.62 0 002.39 1.553c.758.297 1.625.5 2.903.558 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.278-.058 2.145-.261 2.903-.558a6.62 6.62 0 002.39-1.553 6.62 6.62 0 001.553-2.39c.297-.758.5-1.625.558-2.903.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.278-.261-2.145-.558-2.903a6.62 6.62 0 00-1.553-2.39A6.62 6.62 0 0019.85.63C19.092.333 18.225.13 16.947.072 15.667.014 15.259 0 12 0z" />
+                  <path d="M12 5.838a6.162 6.162 0 100 12.324A6.162 6.162 0 0012 5.838zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z" />
+                </svg>
+              </a>
+
+            </div>
+          </div>
+
         </div>
 
-        <div className="py-6 text-sm text-center text-gray-600 not-italic">
-          © 2025 Company Co. All rights reserved.
+
+        {/* DIVIDER */}
+        <div className="border-t-2 border-[#17243a] mt-2"></div>
+
+
+        {/* COPYRIGHT */}
+        <div className="text-center pt-2">
+          <p className="text-[10px] text-[#17243a]">
+            © 2025 Company Co. All rights reserved.
+          </p>
         </div>
-      </footer>
-    </div>
+
+      </div>
+
+    </footer>
   );
 }

@@ -21,95 +21,93 @@ export default function ServiceCard({ service }) {
   return (
     <div
       className="
-        card
         h-full
-        bg-base-100
+        bg-white
         shadow-sm
-        transform
-        transition
-        duration-500
-        hover:scale-105
+        transition-all
+        duration-300
         hover:shadow-xl
-        ease-in-out
         border
         border-gray-100
         rounded-2xl
         overflow-hidden
       "
     >
+      {/* IMAGE */}
+      {imgSrc && (
+        <img
+          src={imgSrc}
+          alt={name}
+          className="h-44 w-full object-cover"
+        />
+      )}
 
-      <div className="card-body flex justify-between flex-col p-6">
+      {/* CARD CONTENT */}
+      <div className="p-5 flex flex-col h-[300px]">
 
-        {/* IMAGE + BASIC INFO */}
-        <div className="space-y-3">
-
-          {imgSrc && (
-            <img
-              src={imgSrc}
-              alt={name}
-              className="h-52 w-full rounded-lg object-cover"
-            />
-          )}
-
-          {/* Category */}
-          <div>
-            <span className="badge badge-md bg-amber-400 text-white border-none font-semibold px-3 py-1 rounded">
-              {category}
-            </span>
-          </div>
-
-          {/* Name + Price */}
-          <div className="flex justify-between items-start gap-3">
-
-            <h2 className="text-2xl font-bold text-gray-900">
-              {name}
-            </h2>
-
-            <span className="text-sm font-bold text-gray-700 whitespace-nowrap">
-              {price}/{frequency}
-            </span>
-
-          </div>
-
+        {/* CATEGORY */}
+        <div className="mb-2">
+          <span
+            className="
+              inline-block
+              bg-amber-400
+              text-white
+              text-xs
+              font-semibold
+              px-3
+              py-1
+              rounded
+            "
+          >
+            {category}
+          </span>
         </div>
 
+        {/* NAME + PRICE */}
+        <div className="flex justify-between items-start gap-3 mb-4">
+          <h2 className="text-xl font-bold text-gray-900 leading-tight">
+            {name}
+          </h2>
 
-        {/*BENEFITS*/}
-        <div className="my-4">
-
-          <ul className="mt-3 flex flex-col gap-2">
-
-            {subscription_benefits.map((benefit, idx) => (
-
-              <li
-                key={idx}
-                className="text-gray-500 text-sm flex gap-2 items-center"
-              >
-
-                <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
-
-                <span>
-                  {benefit}
-                </span>
-
-              </li>
-
-            ))}
-
-          </ul>
-
+          <span className="text-xs font-bold text-gray-900 whitespace-nowrap">
+            {price}/{frequency}
+          </span>
         </div>
 
+        {/* BENEFITS */}
+        <ul className="flex flex-col gap-2 mb-5">
+          {subscription_benefits.map((benefit, idx) => (
+            <li
+              key={idx}
+              className="
+                text-gray-500
+                text-sm
+                flex
+                gap-2
+                items-center
+              "
+            >
+              <Check
+                className="
+                  w-4
+                  h-4
+                  text-gray-500
+                  flex-shrink-0
+                "
+              />
 
-        {/*VIEW DETAILS BUTTON*/}
-        <div className="mt-auto pt-2">
+              <span>{benefit}</span>
+            </li>
+          ))}
+        </ul>
 
+        {/* BUTTON */}
+        <div className="mt-auto">
           <Link
             href={`/serviceDetails/${id}`}
             className="
-              btn
               bg-red-500
-              hover:bg-gray-800
+              hover:bg-red-600
               text-white
               font-bold
               w-full
@@ -118,16 +116,13 @@ export default function ServiceCard({ service }) {
               rounded-lg
               block
               transition-colors
-              tracking-wide
             "
           >
             View Details
           </Link>
-
         </div>
 
       </div>
-
     </div>
   );
 }
